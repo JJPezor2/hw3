@@ -1,9 +1,13 @@
+<h1><%= @places["name"] %></h1>
+
 <div class="row">
-  <% for post in @posts %>
+  <% for entries in @entries %>
     <div class="col-3">
-      <h4><%= post["author"] %></h4>
-      <img class="img-fluid" src="<%= post["image"] %>" class="w-full">
-      <p><%= post["body"] %></p>
+      <h2><%= entry["title"] %></h2>
+      <h3><%= entry["occurred_on"] %></h3>
+      <p><%= entry["description"] %></p>
     </div>
   <% end %>
 </div>
+
+<a href="/<%= place["id"] %>/new">New Post</a>

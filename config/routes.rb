@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   get("/places", {:controller => "places", :action => "index"})
   get("/entries", {:controller => "entries", :action => "index"})
 
+  resources "places"
+  resources "entries"
+
+
+
 end
