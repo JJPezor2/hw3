@@ -2,11 +2,6 @@ class EntriesController < ApplicationController
  def index  
   @entries = Entry.all
  end
- 
- def show
-  @entries = Entry.find_by({"place_id" => params["id"]})
-  @places = Place.where({"id" => @places["place_id"]})
- end
 
  def new
  end
