@@ -5,7 +5,6 @@ class EntriesController < ApplicationController
  
  def show
   @entries = Entry.find_by({"id" => params["id"]})
-  @places = Place.find_by({"id" => @places["place_id"]})
  end
 
 

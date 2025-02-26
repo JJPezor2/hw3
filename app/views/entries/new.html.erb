@@ -1,6 +1,6 @@
-<h1>New Post</h1>
+<h1>New Entry</h1>
 
-<form action="/<%= company["id"] %>/new" method="entry">
+<form action="/<%= place["id"] %>/new" method="post">
   <p>
     <label for="title">Title</label>
     <input type="text" name="title" id="title">
@@ -14,8 +14,8 @@
     <input type="date" name="occurred_on" id="occurred_on">
   </p>
   <p>
-    <label for="place_id">Place</label>
-    <input type="text" name="place_id" id="place_id">
-  </p>
+
+  <input type="hidden" name="company_id" value="<%= params["company_id"] %>">
+
   <button>Submit</button>
 </form>
